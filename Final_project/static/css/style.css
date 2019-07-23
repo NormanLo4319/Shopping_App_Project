@@ -1,0 +1,46 @@
+html, body {
+    background-color:black;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.navbar-nav{ 
+    font-family: cursive; 
+    font-size:18px;
+}
+.navbar-brand{
+    margin-left: 30px;
+}
+.img{
+    margin-left:0px;
+    padding-left: 0px;
+}
+
+#description{
+    margin-top: 90px;
+    margin-left: 40px;
+    color:white;
+    font-size: 38px; 
+    font-family: fantasy;
+}
+footer {
+    background-color:white;
+    border-top-color:rgba(104, 159, 243, 0.63);
+    border-top-style: solid;
+    border-top-width: 5px;
+    color: black;
+    font-family: cursive;
+    font-size: 18px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+}
+
+
+
+
+
+
