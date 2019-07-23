@@ -30,6 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
             <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
             <a class="nav-item nav-link" href="team.html" >Team</a>
             <a class="nav-item nav-link" href="login.html" >Login</a>
@@ -40,17 +41,69 @@
     </div>
     <div class="container">
         <!--{% block content %} {% endblock %}-->
-      <div class = "row">
-        <div class="col-md-4">
-            <img src="../static/images/shopping_img.jpg"  alt="shopping" style="width:100%; height: 100%" styple="float:right"></img>
+      <!--<div class = "row">
+        <div class="col-md-4" id ="upload_img">
+            <img src="../static/images/broccoli.jpg"  alt="upload"></img>
         </div>
-        <div class ="col-md-8">
-            <a id="description" > Step 1: Register/Login</a>
-            <a id="description" > Step 2: Upload A Vegetable Photo</a>
-            <a id="description" > Step 3: See Recipes</a>
+        <div class="col-md-4" id ="upload_img">
+            <img src="../static/images/butternut_squash.jpg"  alt="upload"></img>
+        </div>
+        <div class="col-md-4" id ="upload_img">
+            <img src="../static/images/cucumber.gif"  alt="upload"></img>
+        </div>
+        
+      </div>-->
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem; height: 30rem;">
+                <img src="../static/images/broccoli.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1" >Upload Broccoli Photo</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                    <a href="recipes.html" class="btn btn-primary">See Recipes</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem; height: 30rem;">
+                <img src="../static/images/butternut_squash.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1" >Upload butternut Squash Photo</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                    <a href="recipes.html" class="btn btn-primary">See Recipes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem; height: 30rem">
+                <img src="../static/images/cucumber.gif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1" >Upload Cucumber Photo</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                    <a href="recipes.html" class="btn btn-primary" >See Recipes</a>
+                </div>
+            </div>
         </div>
       </div>
+      
     </div>
+     
     <!-- Footer  -->
     <footer>
         <div class="footer">Copyright &copy; Magic Shopping 2019</div>

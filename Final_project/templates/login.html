@@ -30,6 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
             <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
             <a class="nav-item nav-link" href="team.html" >Team</a>
             <a class="nav-item nav-link" href="login.html" >Login</a>
@@ -40,9 +41,27 @@
     </div>
     <div class="container">
         <!--{% block content %} {% endblock %}-->
-      <div class = "row">
-       
-      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1" style="color:white;">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 300px">
+          <small id="emailHelp" class="form-text text-muted" style="color:grey;">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" style="color:white;">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 300px">
+        </div>
+        <!--<div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1" style="color:white;">Check me out</label>
+        </div>-->
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
     <!-- Footer  -->
     <footer>
