@@ -64,6 +64,20 @@ h5,p{
     font-size: 25px;
 }
 
+.img-circle_pic {
+    border-radius: 50%;
+    margin-bottom: 80px;
+    border-width: 7px;
+    border-color: white;
+    border-style: solid;
+}
+
+h1 {
+    color: white;
+    font-family: fantasy;
+    font-size: 23px;
+}
+
 footer {
     background-color:white;
     border-top-color:rgba(104, 159, 243, 0.63);
