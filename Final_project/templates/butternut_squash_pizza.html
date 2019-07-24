@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Shopping</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+  <!--CSS Link-->
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">-->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;">Magic Shopping</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
+            <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
+            <a class="nav-item nav-link" href="team.html" >Team</a>
+            <a class="nav-item nav-link" href="login.html" >Login</a>
+            <a class="nav-item nav-link" href="register.html">Register</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+        <!--{% block content %} {% endblock %}-->
+      <br>
+      <br>
+      <div class = "row">
+        <div class="col-md-4">
+            <div class="recipe_name">
+               <p>Roasted Butternut Squash Pizza</p>
+               <img src="../recipes/recipe photos/roasted_butternut_squash_pizza.jpeg"  alt="food_recipe" style="width:100%; height: 100%" styple="float:right"></img>
+               <br>
+               <br>
+               <a href="https://www.tablespoon.com/recipes/roasted-butternut-squash-pizza/b697c3bd-7280-4a33-9521-30a950e2eec4" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="font-family: cursive;">Reference</a>
+            </div>
+        </div>
+        <div class ="col-md-3">
+           <div class="ingredients">
+             <p>Ingredients</p>
+           </div>
+        </div>
+        <div class ="col-md-4">
+            <div class="instructions">
+                <p>Instructions</p>
+            </div>
+        </div>
+        <div class ="col-md-1">
+            <div class="cost_hour">
+                <p>Time</p>
+                <p>Cost</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer  -->
+    <footer>
+        <div class="footer">Copyright &copy; Magic Shopping 2019</div>
+    </footer>
+</body>
+</html>
