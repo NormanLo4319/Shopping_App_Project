@@ -1,6 +1,4 @@
-<!--{% extends "layout.html" %}
-{% block content %}-->
-<br>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +14,17 @@
 
   <!--CSS Link-->
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-  <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!--font Awesome Icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- Navigation -->
     <div class="navigation">
       <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;">Magic Shopping</a>
+        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Magic Shopping</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,70 +41,28 @@
       </nav>
     </div>
     <div class="container">
-        <!--{% block content %} {% endblock %}-->
-      <!--<div class = "row">
-        <div class="col-md-4" id ="upload_img">
-            <img src="../static/images/broccoli.jpg"  alt="upload"></img>
-        </div>
-        <div class="col-md-4" id ="upload_img">
-            <img src="../static/images/butternut_squash.jpg"  alt="upload"></img>
-        </div>
-        <div class="col-md-4" id ="upload_img">
-            <img src="../static/images/cucumber.gif"  alt="upload"></img>
-        </div>
-        
-      </div>-->
-      <br>
-      <br>
       <br>
       <div class="row">
         <div class="col-md-4">
             <div class="card" style="width: 18rem; height: 30rem;">
-                <img src="../static/images/broccoli.jpg" class="card-img-top" alt="...">
+                <img src="../static/images/broccoli.jpg" class="card-img-top" alt="..." style="opacity: 0.3">
                 <div class="card-body">
                     <form>
                         <div class="form-group">
-                            <label for="exampleFormControlFile1" >Upload Broccoli Photo</label>
+                            <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
+                            <h3>${{ output }}</h3>
                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <br>
+                            <input type=submit value=Upload>
                         </div>
+                        <a href="broccoli_low.html" class="btn btn-primary">See Recipes</a>
                     </form>
-                    <a href="recipes.html" class="btn btn-primary">See Recipes</a>
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem; height: 30rem;">
-                <img src="../static/images/butternut_squash.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1" >Upload butternut Squash Photo</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                    </form>
-                    <a href="recipes.html" class="btn btn-primary">See Recipes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem; height: 30rem">
-                <img src="../static/images/cucumber.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1" >Upload Cucumber Photo</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                    </form>
-                    <a href="recipes.html" class="btn btn-primary" >See Recipes</a>
                 </div>
             </div>
         </div>
       </div>
-      
     </div>
-     
+    <!--{% endblock %}-->
     <!-- Footer  -->
     <footer>
         <div class="footer">Copyright &copy; Magic Shopping 2019</div>
@@ -111,4 +70,3 @@
 </body>
 </html>
 
-<!--{% endblock %}-->

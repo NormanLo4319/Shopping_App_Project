@@ -1,5 +1,5 @@
 html, body {
-    background-color:black;
+    background-color: white;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -19,7 +19,7 @@ html, body {
 #description{
     margin-top: 50px;
     margin-left: 40px;
-    color:white;
+    color:black;
     font-size: 38px; 
     font-family: fantasy;
 }
@@ -31,7 +31,7 @@ html, body {
 
 h5,p{
     font-family: cursive;
-    color:white;
+    color:black;
     font-weight: bold;
     font-size: 25px;
 }
@@ -46,9 +46,6 @@ h5,p{
     color:black;
 }
 
-.card-img-top{
-    opacity: 0.3;
-}
 
 .form-group{
     position: center;
@@ -59,7 +56,7 @@ h5,p{
 
 .recipe_link{
     font-family: cursive;
-    color:white;
+    color: black;
     font-weight: bold;
     font-size: 25px;
 }
@@ -68,14 +65,43 @@ h5,p{
     border-radius: 50%;
     margin-bottom: 80px;
     border-width: 7px;
-    border-color: white;
+    border-color:lightgrey;
     border-style: solid;
 }
 
 h1 {
-    color: white;
+    color:black;
     font-family: fantasy;
     font-size: 23px;
+}
+
+.carousel {
+    width:1200px;
+    height:480px;
+    position: center;
+}
+
+form{
+    margin-bottom:50px;
+}
+
+label{
+    font-family: cursive;
+    font-size:20px;
+}
+h3{
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+
+.wrapper {
+    text-align: center;
+}
+
+.button1 {
+    position: absolute;
+    top: 50%;
 }
 
 footer {
