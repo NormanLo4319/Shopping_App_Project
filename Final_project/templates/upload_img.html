@@ -1,72 +1,35 @@
+{% extends "layout.html" %}
+{% block content %} 
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem; height: 30rem;">
+            <img src="../static/images/broccoli.jpg" class="card-img-top" alt="..." style="opacity: 0.3">
+            <div class="card-body">
+                <!-- <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
+                        <form method=post enctype=multipart/form-data>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                          <br>
+                          <input type=submit class="btn btn-primary" value="See Recipes">
+                        </form>
+                        
+                    </div>
+                </form> -->
+                <!-- <h1>Upload new File</h1> -->
+                <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
+                <form method=post enctype=multipart/form-data>
+                    <input type=file name=file class="form-control-file">
+                    <br>
+                    <input type=submit class="btn btn-primary" value="See Recipes">
+                </form>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Magic Shopping</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-
-  <!--CSS Link-->
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
-  <!--font Awesome Icon-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-    <!-- Navigation -->
-    <div class="navigation">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Magic Shopping</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
-            <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
-            <a class="nav-item nav-link" href="team.html" >Team</a>
-            <a class="nav-item nav-link" href="login.html" >Login</a>
-            <a class="nav-item nav-link" href="register.html">Register</a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div class="container">
-      <br>
-      <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem; height: 30rem;">
-                <img src="../static/images/broccoli.jpg" class="card-img-top" alt="..." style="opacity: 0.3">
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
-                            <h3>${{ output }}</h3>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                            <br>
-                            <input type=submit value=Upload>
-                        </div>
-                        <a href="broccoli_low.html" class="btn btn-primary">See Recipes</a>
-                    </form>
-                </div>
             </div>
         </div>
-      </div>
     </div>
-    <!--{% endblock %}-->
-    <!-- Footer  -->
-    <footer>
-        <div class="footer">Copyright &copy; Magic Shopping 2019</div>
-    </footer>
-</body>
-</html>
+  </div>
+   
+{% endblock %}
+
 

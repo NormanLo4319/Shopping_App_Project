@@ -1,104 +1,55 @@
-<!--{% extends "layout.html" %}
-{% block content %}-->
-<br>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Magic Shopping</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-
-  <!--CSS Link-->
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-  <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">-->
-  <!--font Awesome Icon-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-    <!-- Navigation -->
-    <div class="navigation">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Magic Shopping</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
-            <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
-            <a class="nav-item nav-link" href="team.html" >Team</a>
-            <a class="nav-item nav-link" href="login.html" >Login</a>
-            <a class="nav-item nav-link" href="register.html">Register</a>
-          </div>
-        </div>
-      </nav>
+{% extends "layout.html" %}
+{% block content %} 
+  <br>
+  
+  <div class="jumbotron" style="text-align: center;">
+      <h1>Registration From</h1>
+      <p>Complete the registration and start using our the service today!</p>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <form method="POST" action="/send" role="form", name="petform">
+            <div class="form-group">
+                <label for="fristName">Frist Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail Address</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail Address">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="fristName">Age</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label for="fristName">Gender</label>
+                <input type="radio" class="form-control" id="male" name="gender">Male
+                <input type="radio" class="form-control" id="female" name="gender">Female
+            </div>
+            <div class="form-group">
+                <label for="inputLat">Zip-Code</label>
+                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Zip Code">
+            </div>
+            <div class="form-group">
+                <label for="inputLon">Your Personal Haritage</label>
+                <input type="radio" class="form-control" id="white" name="ethicity">White
+                <input type="radio" class="form-control" id="black" name="ethicity">Black
+                <input type="radio" class="form-control" id="asian" name="ethicity">Asian
+                <input type="radio" class="form-control" id="others" name="ethicity">Others
+            </div>
+            <!--<input type="submit" value="submit" class="btn btn-default">-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-    <div class="container">
-      <br>
-        <!--{% block content %} {% endblock %}-->
-      <div class="jumbotron" style="text-align: center;">
-          <h1>Registration From</h1>
-          <p>Complete the registration and start using our the service today!</p>
-      </div>
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <form method="POST" action="/send" role="form", name="petform">
-                <div class="form-group">
-                    <label for="fristName">Frist Name</label>
-                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-Mail Address</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail Address">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control" id="password" name="password" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="fristName">Age</label>
-                    <input type="text" class="form-control" id="age" name="age" placeholder="Age">
-                </div>
-                <div class="form-group">
-                    <label for="fristName">Gender</label>
-                    <input type="radio" class="form-control" id="male" name="gender">Male
-                    <input type="radio" class="form-control" id="female" name="gender">Female
-                </div>
-                <div class="form-group">
-                    <label for="inputLat">Zip-Code</label>
-                    <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Zip Code">
-                </div>
-                <div class="form-group">
-                    <label for="inputLon">Your Personal Haritage</label>
-                    <input type="radio" class="form-control" id="white" name="ethicity">White
-                    <input type="radio" class="form-control" id="black" name="ethicity">Black
-                    <input type="radio" class="form-control" id="asian" name="ethicity">Asian
-                    <input type="radio" class="form-control" id="others" name="ethicity">Others
-                </div>
-                <!--<input type="submit" value="submit" class="btn btn-default">-->
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Footer  -->
-    <footer>
-        <div class="footer">Copyright &copy; Magic Shopping 2019</div>
-    </footer>
-</body>
-</html>
+  </div>
 
-<!--{% endblock %}-->
+{% endblock %}
+   
