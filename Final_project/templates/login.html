@@ -1,73 +1,24 @@
-<!--{% extends "layout.html" %}
-{% block content %}-->
-<br>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Magic Shopping</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-
-  <!--CSS Link-->
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-  <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">-->
-</head>
-
-<body>
-    <!-- Navigation -->
-    <div class="navigation">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" style="font-weight: bolder;  font-size:25px; font-family: cursive; letter-spacing: .30em;">Magic Shopping</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html" >Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="upload_img.html" >Upload Photo</a>
-            <a class="nav-item nav-link" href="recipes.html" >Recipes</a>
-            <a class="nav-item nav-link" href="team.html" >Team</a>
-            <a class="nav-item nav-link" href="login.html" >Login</a>
-            <a class="nav-item nav-link" href="register.html">Register</a>
-          </div>
-        </div>
-      </nav>
+{% extends "layout.html" %}
+{% block content %} 
+  <br>
+  <br>
+  <br>
+  <br>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1" style="color:white;">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 300px">
+      <small id="emailHelp" class="form-text text-muted" style="color:grey;">We'll never share your email with anyone else.</small>
     </div>
-    <div class="container">
-        <!--{% block content %} {% endblock %}-->
-      <br>
-      <br>
-      <br>
-      <br>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1" style="color:white;">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 300px">
-          <small id="emailHelp" class="form-text text-muted" style="color:grey;">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1" style="color:white;">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 300px">
-        </div>
-        <!--<div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1" style="color:white;">Check me out</label>
-        </div>-->
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    <div class="form-group">
+      <label for="exampleInputPassword1" style="color:white;">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width: 300px">
     </div>
-    <!-- Footer  -->
-    <footer>
-        <div class="footer">Copyright &copy; Magic Shopping 2019</div>
-    </footer>
-</body>
-</html>
-
-<!--{% endblock %}-->
+    <!--<div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1" style="color:white;">Check me out</label>
+    </div>-->
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
