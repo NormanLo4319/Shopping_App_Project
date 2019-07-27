@@ -2,34 +2,36 @@
 {% block content %} 
   <br>
   <div class="row">
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem; height: 30rem;">
-            <img src="../static/images/broccoli.jpg" class="card-img-top" alt="..." style="opacity: 0.3">
-            <div class="card-body">
-                <!-- <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
-                        <form method=post enctype=multipart/form-data>
-                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                          <br>
-                          <input type=submit class="btn btn-primary" value="See Recipes">
-                        </form>
-                        
-                    </div>
-                </form> -->
-                <!-- <h1>Upload new File</h1> -->
-                <label for="exampleFormControlFile1" style="font-size:18px">Upload Photo to Predict</label>
-                <form method=post enctype=multipart/form-data>
-                    <input type=file name=file class="form-control-file">
-                    <br>
-                    <input type=submit class="btn btn-primary" value="See Recipes">
-                </form>
-
-            </div>
+        <br>
+        <br>
+        <div class="predict" style="margin-left: 400px">
+          <h3>Upload Photo to Predict</h3>  
+          <img src="../static/images/camera_icon.gif" id="photo" class="img-thumbnail">
+          <br>
+          <br> 
+          <form method=post enctype=multipart/form-data>
+            <input type="file" class="form-control-file" onchange="preview(event)">  
+            <br>
+            <input type="file" name=file> 
+            <br>
+            <br>
+            <input type=submit class="btn btn-primary" value="See Recipes">
+          </form>
         </div>
-    </div>
   </div>
-   
-{% endblock %}
+    
 
+<script type="text/javascript">
+    function preview(event){
+      var input = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(){
+        var result = reader.result;
+        var img = document.getElementById('photo');
+        img.src = result;
+      }
+      reader.readAsDataURL(input);
+    }
+</script>
 
+{% endblock %}  

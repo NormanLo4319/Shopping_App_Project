@@ -12,9 +12,12 @@ from keras.applications.xception import (
 from keras import backend as K
 
 from flask import Flask, request, redirect, url_for, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'food_test/test_images'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/data.db'
+
 
 model = None
 graph = None
@@ -45,6 +48,7 @@ def index():
 def upload_file():
     data = {"success": False}
     if request.method == 'POST':
+        # if request.files.get('file'):
         if request.files.get('file'):
             # read the file
             file = request.files['file']
@@ -67,12 +71,12 @@ def upload_file():
             # preprocess the image and prepare it for classification
             image = prepare_image(im)
 
+
             global graph
             with graph.as_default():
                 preds = model.predict(image)
                 print(preds)
                 results = decode_predictions(preds)
-                # print the results
                 print(results)
 
                 prediction = []
@@ -95,7 +99,61 @@ def upload_file():
 
 @app.route('/broccoli_pancakes')
 def broccoli_pancakes():
-    return render_template("broccoli_pancakes.html")
+    broccoli_pancakes = recipes.query.filter_by(name="Savory Broccoli Pancakes").first()
+    ingredients = broccoli_pancakes.ingredients
+    time = broccoli_pancakes.time
+    instruction = broccoli_pancakes.direction
+    broccoli_pancakes_cost = ingredient.query.filter_by(name="Savory Broccoli Pancakes").first()
+    cost = broccoli_pancakes_cost.cost
+
+    return render_template("broccoli_pancakes.html", ingredients=ingredients , instruction=instruction, time=time , cost=broccoli_pancakes_cost)
+
+
+@app.route('/register')
+def register():
+    return render_template("register.html")
+
+
+@app.route('/team')
+def team():
+    return render_template("team.html")
+
+@app.route('/recipes')
+def recipes():
+     return render_template("recipes.html")
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+@app.route('/upload_img')
+def upload_img():
+     return render_template("upload_img.html")
+
+@app.route('/broccoli_high')
+def broccoli_high():
+    return render_template("broccoli_high.html")
+
+@app.route('/broccoli_low')
+def broccoli_low():
+    return render_template("broccoli_low.html")
+
+@app.route('/cucumber_high')
+def cucumber_high():
+    return render_template("cucumber_high.html")
+
+@app.route('/cucumber_low')
+def cucumber_low():
+    return render_template("cucumber_low.html")
+
+@app.route('/butternut_squash_high')
+def butternut_squash_high():
+    return render_template("butternut_squash_high.html")
+
+@app.route('/butternut_squash_low')
+def butternut_squash_low():
+    return render_template("butternut_squash_low.html")
+
 
 @app.route('/broccoli_salad')
 def broccoli_salad():
@@ -129,6 +187,8 @@ def cucumber_salad():
 @app.route('/watermelon_cucumber')
 def watermelon_cucumber():
     return render_template("watermelon_cucumber.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
