@@ -16,9 +16,6 @@ For each recipe, we also show each ingredient’s cost at amazon. People can com
 * View recipes
 * Select the desired recipe to check what ingredients need and how to cook in detail
 
-## Finding Data:
-
-
 ## Technologies:
 *  Loaded data to database
 *  Created flask 
