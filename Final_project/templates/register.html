@@ -8,10 +8,10 @@
   </div>
   <div class="row">
     <div class="col-md-offset-2 col-md-8">
-        <form method="POST" action="/send" role="form", name="petform">
+        <form method="POST" action="/register" role="form", name="petform">
             <div class="form-group">
                 <label for="fristName">Frist Name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Last Name">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Last Name" >
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name</label>
@@ -31,8 +31,8 @@
             </div>
             <div class="form-group">
                 <label for="fristName">Gender</label>
-                <input type="radio" class="form-control" id="male" name="gender">Male
-                <input type="radio" class="form-control" id="female" name="gender">Female
+                <input type="radio" class="form-control" id="male" name="gender" value="male">Male
+                <input type="radio" class="form-control" id="female" name="gender" value="female">Female
             </div>
             <div class="form-group">
                 <label for="inputLat">Zip-Code</label>
@@ -40,10 +40,10 @@
             </div>
             <div class="form-group">
                 <label for="inputLon">Your Personal Haritage</label>
-                <input type="radio" class="form-control" id="white" name="ethicity">White
-                <input type="radio" class="form-control" id="black" name="ethicity">Black
-                <input type="radio" class="form-control" id="asian" name="ethicity">Asian
-                <input type="radio" class="form-control" id="others" name="ethicity">Others
+                <input type="radio" class="form-control" id="white" name="ethicity" value="white">White
+                <input type="radio" class="form-control" id="black" name="ethicity" value="black">Black
+                <input type="radio" class="form-control" id="asian" name="ethicity" value="asian">Asian
+                <input type="radio" class="form-control" id="others" name="ethicity"value="others">Others
             </div>
             <!--<input type="submit" value="submit" class="btn btn-default">-->
             <button type="submit" class="btn btn-primary">Submit</button>
