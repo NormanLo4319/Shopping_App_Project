@@ -1,15 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
 <br>
-<br>
 <div class = "row">
 <div class="col-md-4">
     <div class="recipe_name">
         {% for recp in recps %}
         <h2>{{ recp.name }}</h2>
-        <img src="../static/recipes/recipe_photos/{{recp.name}}.jpg"  alt="food_recipe" style="width:100%; height: 100%" styple="float:left"></img>
+        <img src="../static/recipes/recipe_photos/{{recp.name}}.jpg"  alt="food_recipe" style="width:96%; height: 90%;" styple="float:left"></img>
         {% endfor %} 
-        <br> 
         <br>
         <div class="card" style="width: 21rem;">
             <div class="card-body">
@@ -32,7 +30,9 @@
                     {% endfor %}    
                 </div>
             </div>
-            <a href="https://sugarspunrun.com/broccoli-salad/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="font-family: cursive;">Reference</a> 
+            {% for recp in recps %}
+            <a href="{{recp.link}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="font-family: cursive;">Reference</a> 
+            {% endfor %} 
         </div>
     </div>
 </div>

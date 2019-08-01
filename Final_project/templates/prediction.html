@@ -1,6 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>Prediction</h2>
-<p>result<p>
+<br>
+<br>
+<div class="row" style="margin-left: 150px;">
+    <div class="col-md-6" >
+        <h1>Health Evaluation</h1>
+        <div class="card text-center" style="width: 400px;">
+            <img src="../static/images/{{result}}.jpg"  alt="health_result" style="width:400px; height: 300px" style="position:center"></img>
+            <div class="card-body">
+                <h2 class="card-title">Obesity Risk Prediction Result</h2>
+                <p class="card-text" style="font-family: fantasy; font-size:22px;">{{ result }}</p>
+            </div>
+        </div>
+        <div class="card text-center" style="width: 400px;">
+            <div class="card-body">
+                <h2 class="card-title">BMI Prediction Result</h2>
+                <p class="card-text" style="font-family: fantasy; font-size:22px;">{{ BMI }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+          <img src="../static/images/women_BMI.jpg"  alt="BMI" style="width:300px; height: 300px" ></img>
+        </div>
+        <br>
+        <div class="row">
+            <img src="../static/images/men_BMI.jpg"  alt="BMI" style="width:300px; height: 300px" ></img>
+        </div>
+    </div>
+</div>
 
-{% endblock %}
+{% endblock content %}

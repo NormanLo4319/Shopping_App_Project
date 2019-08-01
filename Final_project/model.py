@@ -158,7 +158,7 @@ def register():
        else:
            result = "You are at risk!"
 
-       return render_template("test.html", data=data, result=result, title="Health Evaluation", BMI=prediction2)
+       return render_template("prediction.html", data=data, result=result, title="Health Evaluation", BMI=prediction2)
    return render_template("register.html")
 
 @app.route('/team')
