@@ -9,15 +9,11 @@ The idea of this app allows for people to upload images of their desired food an
 For each recipe, we also show each ingredient’s cost at amazon. People can compare costs from regular grocery with amazon.  
 
 
-
 ## How to use the app:
 * Register/login
 * Upload the food Images 
 * View recipes
 * Select the desired recipe to check what ingredients need and how to cook in detail
-
-## Finding Data:
-
 
 ## Technologies:
 *  Loaded data to database
@@ -25,9 +21,6 @@ For each recipe, we also show each ingredient’s cost at amazon. People can com
 *  Used Xception model and VGG19 model to predict   images
 *  Built web pages HTML5
 *  Used Javascript to upload and diplay images
-
-## Website link:
-
 
 ### Home Page:
 ![home](README_images/home.png)
@@ -40,7 +33,10 @@ For each recipe, we also show each ingredient’s cost at amazon. People can com
 ![recipes](README_images/recipes.png)
 
 ### Check A Desired Recipe:
-![one_recipe](README_images/recipe.png)
+![pancake](README_images/pancake.png)
 
+### Fill Out Register Form to Predict Risk of Obesity
+![register](README_images/register.png)
 
-
+### Prediction Result of Risk of Obesity and BMI
+![result](README_images/obesity_prediction.png)
