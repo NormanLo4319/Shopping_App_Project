@@ -1,5 +1,5 @@
-# Shopping_App_Project
-Application for shopping recommendation.
+# Shopping App Project
+Utilizig machine learning models to create application for shopping recommendation.
 
 ## Background:
 Our team wants to make grocery shopping more convenient. Because sometimes we go to grocery to purchase food to cook lunches or dinners, we don’t know what to purchase or what types of food to cook. Sometimes even we have an idea what to cook. It will end to miss purchase certain types of ingredients or not purchase enough amounts of food, then we couldn’t even cook the completed cuisines. 
