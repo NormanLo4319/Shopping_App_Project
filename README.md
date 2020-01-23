@@ -2,9 +2,9 @@
 Utilizig two machine learning models to create a full-functioning shopping recommendation web application.
 
 ## Background:
-Our team wants to make grocery shopping more convenient. Because sometimes we go to grocery to purchase food to cook lunches or dinners, we don’t know what to purchase or what types of food to cook. Sometimes even we have an idea what to cook. It will end to miss purchase certain types of ingredients or not purchase enough amounts of food, then we couldn’t even cook the completed cuisines. 
+Our team wants to make grocery shopping more convenient. Sometimes we go to grocery to purchase food to cook lunch or dinner, but we don’t know what to purchase or what types of food to cook. Even we have an idea what to cook, it will end up missing purchase certain types of ingredient or not purchase enough amounts of it, then we couldn’t completed the cuisines. 
 
-The idea of this app allows for people to upload images of their desired food and check different recipes with comprehensive ingredients, instruction, cook time and calories by using their photos. According to people’s register information, the app can predict whether the person is in high or low obesity group. If she/he is in high obesity group, the app will recommend her/him a ranking of recipes by low calories to high calories. 
+The idea of this app allows for people to upload images of their desired food and check different recipes with comprehensive ingredients, instruction, cook time and calories by using taking a picture of an ingredient at the store. According to the register information, the app can predict the risk of obesity the customer, in order to recommend her/him a ranking of recipes by low calories to high calories. 
 
 For each recipe, we also show each ingredient’s cost at amazon. People can compare costs from regular grocery with amazon.  
 
