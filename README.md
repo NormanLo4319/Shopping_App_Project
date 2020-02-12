@@ -1,5 +1,5 @@
 # Shopping App Project
-Utilizig two machine learning models to create a full-functioning shopping recommendation web application.
+Utilizig two machine learning models to create a full-functioning shopping recommendation web application for in-store customers.
 
 ## Background:
 Our team wants to make grocery shopping more convenient. Sometimes we go to grocery to purchase food to cook lunch or dinner, but we don’t know what to purchase or what types of food to cook. Even we have an idea what to cook, it will end up missing purchase certain types of ingredient or not purchase enough amounts of it, then we couldn’t completed the cuisines. 
