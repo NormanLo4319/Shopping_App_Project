@@ -8,7 +8,6 @@ The idea of this app allows for people to upload images of their desired food an
 
 For each recipe, we also show each ingredient’s cost at amazon. People can compare costs from regular grocery with amazon.  
 
-
 ## How to use the app:
 * Register/login
 * Upload the food Images 
@@ -40,3 +39,5 @@ For each recipe, we also show each ingredient’s cost at amazon. People can com
 
 ### Prediction Result of Risk of Obesity and BMI
 ![result](README_images/obesity_prediction.png)
+
+Copyright © 2020 Norman Lo
